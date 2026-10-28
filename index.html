@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naomi Isadola | Developer Profile</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --tag-bg: #334155;
+    }
+
+    .light-mode {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0284c7;
+      --accent-hover: #0369a1;
+      --tag-bg: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      width: 100%;
+      max-width: 450px;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #818cf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 0 auto 16px auto;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .track {
+      color: var(--accent);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .email {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .section-body {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .skill-tag {
+      background-color: var(--tag-bg);
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+    }
+
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <button class="toggle-btn" id="themeToggle">🌙</button>
+    
+    <div class="avatar">NI</div>
+    
+    <h1>Naomi Isadola</h1>
+    <p class="track">Software Developer in Training</p>
+    <p class="email">naomi.isadola@learninglions.org</p>
+
+    <div class="section">
+      <div class="section-title">Work & Goal</div>
+      <p class="section-body">Building web applications and mastering Linux server setups to create impactful technology solutions.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Skills & Tools</div>
+      <div class="skills">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">Linux / WSL2</span>
+        <span class="skill-tag">Git & Terminal</span>
+      </div>
+    </div>
+
+    <a href="mailto:naomi.isadola@learninglions.org" class="btn">Get In Touch</a>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+  </script>
+
+</body>
+</html>
