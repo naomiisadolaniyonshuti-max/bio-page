@@ -47,3 +47,6 @@ h2.section-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing
   .sections-grid { flex-direction: row; gap: 1.5rem; }
   .sections-grid .section { flex: 1; }
 }
+
+img {
+  max-width: 100
