@@ -48,5 +48,4 @@ h2.section-title { font-size: 0.85rem; text-transform: uppercase; letter-spacing
   .sections-grid .section { flex: 1; }
 }
 
-img {
-  max-width: 100
+img { max-width: 100%; height: auto; }
